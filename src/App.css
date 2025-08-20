@@ -1,0 +1,137 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 350px;
+  width: 100%;
+}
+
+.display {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: right;
+  color: white;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.equation {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 5px;
+  min-height: 20px;
+  word-wrap: break-word;
+}
+
+.current {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 15px;
+  padding: 20px;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+}
+
+button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button.operator {
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+}
+
+button.operator:hover {
+  background: rgba(255, 193, 7, 0.3);
+}
+
+button.clear {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+}
+
+button.clear:hover {
+  background: rgba(244, 67, 54, 0.3);
+}
+
+button.equals {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  grid-column: span 2;
+}
+
+button.equals:hover {
+  background: rgba(76, 175, 80, 0.3);
+}
+
+button.zero {
+  grid-column: span 2;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .calculator {
+    padding: 15px;
+    max-width: 100%;
+  }
+  
+  button {
+    padding: 18px;
+    font-size: 18px;
+  }
+  
+  .current {
+    font-size: 32px;
+  }
+  
+  .equation {
+    font-size: 14px;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .App {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  }
+} 
